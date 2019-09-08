@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let menu of menus; index as i; trackBy: menu ? menu.title : null"
+    >
+      <a href="#" [ngClass]="{'active': selectIndex === i}"
+      (click)="selectIndex = i"
+      >{{ menu.title }}</a>
+    </li>
+  </ul>
