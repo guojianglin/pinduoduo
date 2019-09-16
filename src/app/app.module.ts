@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScrollableTapComponent } from './components';
+import { ScrollableTapComponent, ImageSliderComponent } from './components';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ScrollableTapComponent
+    ScrollableTapComponent,
+    ImageSliderComponent
   ],
   imports: [
     BrowserModule,
@@ -17,4 +19,6 @@ import { ScrollableTapComponent } from './components';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

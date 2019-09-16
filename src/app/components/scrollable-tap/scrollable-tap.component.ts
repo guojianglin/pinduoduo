@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges } from '@angular/core';
 
-interface TopMenu {
+export interface TopMenu {
   title: string;
   readonly link: string;
 }
@@ -10,82 +10,36 @@ interface TopMenu {
   templateUrl: './scrollable-tap.component.html',
   styleUrls: ['./scrollable-tap.component.scss']
 })
-export class ScrollableTapComponent implements OnInit {
-
+export class ScrollableTapComponent implements OnInit, OnChanges {
+  /**
+   * 构造函数总是第一个被调用
+   */
   constructor() { }
-  selectIndex = -1;
-  menus: TopMenu[] = [
-    {
-      title: '热门',
-      link: '1'
-    },
-    {
-      title: '电脑',
-      link: '1'
-    },
-    {
-      title: '男装',
-      link: '2'
-    },
-    {
-      title: '百货',
-      link: '3'
-    },
-    {
-      title: '运动',
-      link: '4'
-    },
-    {
-      title: '家纺',
-      link: '5'
-    },
-    {
-      title: '内衣',
-      link: '6'
-    },
-    {
-      title: '家装',
-      link: '7'
-    },
-    {
-      title: '家具',
-      link: '7'
-    },
-    {
-      title: '水果',
-      link: '8'
-    },
-    {
-      title: '汽车',
-      link: '9'
-    },
-    {
-      title: '电器',
-      link: '10'
-    },
-    {
-      title: '鞋包',
-      link: '11'
-    },
-    {
-      title: '食品',
-      link: '12'
-    },
-    {
-      title: '手机',
-      link: '1'
-    },
-    {
-      title: '母婴',
-      link: '12'
-    },
-    {
-      title: '美妆',
-      link: '1'
-    },
-  ];
+  selectedIndex = -1;
+  @Input() menus: TopMenu[] = [];
+  @Input() backgroundColor = 'red';
+  @Input() titleColor = '#000';
+  @Input() titleActiveColor = '#000';
+  @Input() indicatorColor = 'brown';
+  @Output() tapSelected = new EventEmitter();
 
+  /**
+   * 组件输入型属性改变时调用，第一个调用且以后只要有输入性属性改变就会调用
+   * @param changes 索引对象 key是属性名，value是SimpleChanges
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes);
+  }
+
+  /**
+   * 组件初始化完成，可以安全地使用方法和属性
+   */
   ngOnInit() {
+  }
+
+  handleSelected(index: number) {
+    this.selectedIndex = index;
+    this.tapSelected.emit(this.menus[this.selectedIndex]);
   }
 
 }

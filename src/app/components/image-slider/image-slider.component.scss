@@ -1,0 +1,42 @@
+.container {
+    position: relative;
+    overflow: hidden;
+
+    .image-slider {
+        display: flex;
+        overflow: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        -web-overflow-scrolling: touch;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            scroll-snap-align: start;
+        }
+    }
+
+    .nav-section {
+        position: absolute;
+        bottom: 0;
+        color: #fff;
+        width: 100%;
+        background-color: #000;
+        opacity: .5;
+        display: flex;
+        justify-content: flex-end;
+        align-items: stretch;
+
+        .slide-button {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            margin: 5px;
+            border-radius: 50%;
+
+            &.select-slide-button {
+                background-color: green;
+            }
+        }
+    }
+}

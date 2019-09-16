@@ -1,1 +1,8 @@
-<app-scrollable-tap></app-scrollable-tap>
+<app-scrollable-tap 
+[menus]="topMenus" 
+(tapSelected)="handleTapSelected($event)"
+backgroundColor="green"
+titleActiveColor="red"
+indicatorColor="green"
+></app-scrollable-tap>
+<app-image-slider [imageSlider]="imageSlider"></app-image-slider>
