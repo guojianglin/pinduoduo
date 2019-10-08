@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TopMenu, ImageSlider } from './components';
+import { ImageSlider, TopMenu } from './shared/components';
 
 
 @Component({
@@ -8,6 +8,7 @@ import { TopMenu, ImageSlider } from './components';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  username = 'zs';
   topMenus: TopMenu[] = [
     {
       title: '热门',
