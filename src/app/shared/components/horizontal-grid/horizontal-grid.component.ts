@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ElementRef, HostBinding, Renderer2, AfterViewInit, AfterContentInit } from '@angular/core';
 
 export interface Channel {
   id: number;
@@ -12,7 +12,9 @@ export interface Channel {
   templateUrl: './horizontal-grid.component.html',
   styleUrls: ['./horizontal-grid.component.scss']
 })
-export class HorizontalGridComponent implements OnInit {
+export class HorizontalGridComponent implements OnInit, AfterViewInit, AfterContentInit {
+  // @HostBinding('style.display') display = 'block';
+
   channels: Channel[] = [
     {
       id: 1,
@@ -63,7 +65,20 @@ export class HorizontalGridComponent implements OnInit {
       link: ''
     },
   ];
-  ngOnInit() {
+  constructor(
+    private elr: ElementRef,
+    private rd2: Renderer2
 
+  ) {
+    console.log(this.elr.nativeElement);
+  }
+  ngOnInit() {
+    // this.rd2.setStyle(this.elr.nativeElement, 'display', 'flex');
+  }
+  ngAfterContentInit(): void {
+    // this.rd2.setStyle(this.elr.nativeElement, 'display', 'flex');
+  }
+  ngAfterViewInit() {
+    // this.rd2.setStyle(this.elr.nativeElement, 'display', 'flex');
   }
 }
