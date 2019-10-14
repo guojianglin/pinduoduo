@@ -1,8 +1,4 @@
-<div appGridItem *ngFor="let item of channels">
-    <div [appGridItemImage]="'4rem'">
-        <svg class="icon img" aria-hidden="true">
-            <use [attr.href]="'#'+item.icon"></use>
-        </svg>
-    </div>
-    <span appGridItemTitle>{{ item.title }}</span>
-</div>
+<!-- <ng-content select="span"></ng-content> -->
+<ng-content select="div"></ng-content>
+<ng-content select="div"></ng-content>
+<!-- <ng-content></ng-content> -->

@@ -8,4 +8,22 @@ indicatorColor="green"
 <app-image-slider [imageSlider]="imageSlider"></app-image-slider>
 
 
-<app-horizontal-grid></app-horizontal-grid>
+<app-horizontal-grid>
+    <div appGridItem *ngFor="let item of channels">
+        <div [appGridItemImage]="'4rem'">
+            <svg class="icon img" aria-hidden="true">
+                <use [attr.href]="'#'+item.icon"></use>
+            </svg>
+        </div>
+        <span appGridItemTitle>{{ item.title }}</span>
+    </div>
+
+    <span appGridItem *ngFor="let item of channels">
+        <div [appGridItemImage]="'4rem'">
+            <svg class="icon img" aria-hidden="true">
+                <use [attr.href]="'#'+item.icon"></use>
+            </svg>
+        </div>
+        <span appGridItemTitle>{{ item.title }}</span>
+    </span>
+</app-horizontal-grid>
