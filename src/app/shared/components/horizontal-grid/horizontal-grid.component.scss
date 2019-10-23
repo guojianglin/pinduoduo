@@ -1,4 +1,43 @@
 :host {
     display: flex;
     overflow-x: auto;
+    flex-direction: column;
+}
+
+.container {
+    padding: 5px 0;
+    // 网格
+    display: grid;
+    place-content: stretch;
+    place-items: center;
+    grid-gap: .4rem;
+    grid-auto-flow: row;
+    // 滚动
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        width: 0 !important;  //vertival scrollbar
+        display: none !important; // horizontal scrollbar
+        // background: transparent;
+    } //safari and chrome
+    scrollbar-width: none; //firefox
+    overflow: -moz-hidden-unscrollable;//firefox android
+    -ms-overflow-style: none;
+}
+
+.underline {
+    width: 20%;
+    height: 2px;
+    background-color: #f5f5f5;
+    margin: 0 auto;
+
+    .heightline {
+        width: 50%;
+        height: 2px;
+        background-color: #e02f29;
+        padding: 0;
+    }
 }
