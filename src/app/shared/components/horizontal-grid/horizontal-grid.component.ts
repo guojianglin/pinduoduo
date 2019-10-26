@@ -50,6 +50,5 @@ export class HorizontalGridComponent implements OnInit, AfterViewInit, AfterCont
 
   handleScroll(evt) {
     this.sliderMargin = `0 ${100 * evt.target.scrollLeft / evt.target.scrollWidth}%`;
-    console.log('sliderMargin', this.sliderMargin)
   }
 }
