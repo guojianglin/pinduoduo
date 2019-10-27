@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageSlider, TopMenu, Channel } from '../../../shared/components';
+import { TopMenu } from '../../../shared/components';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-container',
@@ -11,207 +12,80 @@ export class HomeContainerComponent implements OnInit {
   topMenus: TopMenu[] = [
     {
       title: '热门',
-      link: '1'
+      link: 'hot'
     },
     {
       title: '电脑',
-      link: '1'
+      link: 'computer'
     },
     {
       title: '男装',
-      link: '2'
+      link: 'men'
     },
     {
       title: '百货',
-      link: '3'
+      link: 'prod'
     },
     {
       title: '运动',
-      link: '4'
+      link: 'sport'
     },
     {
       title: '家纺',
-      link: '5'
+      link: 'house'
     },
     {
       title: '内衣',
-      link: '6'
+      link: 'shirt'
     },
     {
       title: '家装',
-      link: '7'
+      link: 'decorate'
     },
     {
       title: '家具',
-      link: '7'
+      link: 'tool'
     },
     {
       title: '水果',
-      link: '8'
+      link: 'fruit'
     },
     {
       title: '汽车',
-      link: '9'
+      link: 'car'
     },
     {
       title: '电器',
-      link: '10'
+      link: 'frig'
     },
     {
       title: '鞋包',
-      link: '11'
+      link: 'shoes'
     },
     {
       title: '食品',
-      link: '12'
+      link: 'food'
     },
     {
       title: '手机',
-      link: '1'
+      link: 'phone'
     },
     {
       title: '母婴',
-      link: '12'
+      link: 'baby'
     },
     {
       title: '美妆',
-      link: '1'
+      link: 'markup'
     },
   ];
-  channels: Channel[] = [
-    {
-      id: 1,
-      icon: 'icon-zhiwu',
-      title: '植物',
-      link: ''
-    },
-    {
-      id: 2,
-      icon: 'icon-naozhong',
-      title: '闹钟',
-      link: ''
-    },
-    {
-      id: 3,
-      icon: 'icon-qiche',
-      title: '汽车',
-      link: ''
-    },
-    {
-      id: 4,
-      icon: 'icon-lipin',
-      title: '礼品',
-      link: ''
-    },
-    {
-      id: 5,
-      icon: 'icon-jishiben',
-      title: '记事本',
-      link: ''
-    },
-    {
-      id: 6,
-      icon: 'icon-diqiuyi',
-      title: '地球仪',
-      link: ''
-    },
-    {
-      id: 7,
-      icon: 'icon-dianshiji',
-      title: '电视机',
-      link: ''
-    },
-    {
-      id: 8,
-      icon: 'icon-biaoqing',
-      title: '表情',
-      link: ''
-    },
-    {
-      id: 1,
-      icon: 'icon-zhiwu',
-      title: '植物',
-      link: ''
-    },
-    {
-      id: 2,
-      icon: 'icon-naozhong',
-      title: '闹钟',
-      link: ''
-    },
-    {
-      id: 3,
-      icon: 'icon-qiche',
-      title: '汽车',
-      link: ''
-    },
-    {
-      id: 4,
-      icon: 'icon-lipin',
-      title: '礼品',
-      link: ''
-    },
-    {
-      id: 5,
-      icon: 'icon-jishiben',
-      title: '记事本',
-      link: ''
-    },
-    {
-      id: 6,
-      icon: 'icon-diqiuyi',
-      title: '地球仪',
-      link: ''
-    },
-    {
-      id: 7,
-      icon: 'icon-dianshiji',
-      title: '电视机',
-      link: ''
-    },
-    {
-      id: 8,
-      icon: 'icon-biaoqing',
-      title: '表情',
-      link: ''
-    },
-  ];
-  imageSlider: ImageSlider[] = [
-    {
-      imgUrl: '/assets/images/1.png',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl: '/assets/images/2.png',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl: '/assets/images/3.png',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl: '/assets/images/4.png',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl: '/assets/images/5.png',
-      link: '',
-      caption: ''
-    },
-    {
-      imgUrl: '/assets/images/6.png',
-      link: '',
-      caption: ''
-    }
-  ];
-  constructor() {}
+
+  constructor(
+    private router: Router
+  ) {}
   ngOnInit() {}
   handleTapSelected(menu: TopMenu) {
-    console.log(menu);
+    this.router.navigate(['/home', menu.link]);
   }
 
 }
