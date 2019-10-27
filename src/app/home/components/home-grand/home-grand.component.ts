@@ -6,10 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-grand.component.css']
 })
 export class HomeGrandComponent implements OnInit {
+  date: Date;
+  price = 123.123456;
+  data = [1, 2, 3, 4, 5, 6, 7];
+  constructor() {
 
-  constructor() { }
+  }
 
   ngOnInit() {
+    this.date = this.minusDate(new Date(), 30);
+  }
+
+  minusDate(date: Date, days: number) {
+    const result = new Date(date);
+    result.setDate(result.getDate() - days);
+    return result;
   }
 
 }
