@@ -19,6 +19,7 @@ export class HomeGrandComponent implements OnInit {
 
   minusDate(date: Date, days: number) {
     const result = new Date(date);
+    console.log('getDate', result.getDate());
     result.setDate(result.getDate() - days);
     return result;
   }

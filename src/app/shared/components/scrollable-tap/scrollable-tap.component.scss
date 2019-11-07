@@ -5,6 +5,14 @@ ul {
     flex-direction: row;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        width: 0 !important;  //vertival scrollbar
+        display: none !important; // horizontal scrollbar
+        // background: transparent;
+    } //safari and chrome
+    scrollbar-width: none; //firefox
+    overflow: -moz-hidden-unscrollable;//firefox android
+    -ms-overflow-style: none;
 
     li{
         display: flex;
@@ -21,7 +29,7 @@ ul {
             &.active {
                 color: red;
             }
-            
+
         }
         .indicator {
             height: 2px;

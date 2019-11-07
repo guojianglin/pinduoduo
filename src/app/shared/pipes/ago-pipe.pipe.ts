@@ -5,7 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class AgoPipePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
+  transform(value: any, args?: any,  args2?: any): any {
+    console.log('args', args);
+    console.log('args2', args2);
     if (value) {
       value = new Date(value);
       const intervals = {
