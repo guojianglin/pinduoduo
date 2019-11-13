@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef, OnChanges } from '@angular/core';
 
 export interface ImageSlider {
   imgUrl: string;
@@ -9,9 +9,10 @@ export interface ImageSlider {
 @Component({
   selector: 'app-image-slider',
   templateUrl: './image-slider.component.html',
-  styleUrls: ['./image-slider.component.scss']
+  styleUrls: ['./image-slider.component.scss'],
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
+export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy, OnChanges {
 
   @Input() imageSlider: ImageSlider[];
   @Input() sliderHeight = '160px';
@@ -22,14 +23,18 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
   selectIndex = 0;
   timeoutId;
   @ViewChild('imgSlider', {static: true}) imgSlider: ElementRef;
-  constructor(private rd2: Renderer2) { }
+  constructor(private rd2: Renderer2, private ref: ChangeDetectorRef) { }
 
   ngOnInit() {
     console.log('ngOnInit', this.imgSlider);
+    this.autoSlide();
+  }
+
+  ngOnChanges(): void {
+    console.log('this.imageSlider', this.imageSlider);
   }
 
   ngAfterViewInit() {
-    this.autoSlide();
   }
 
   ngOnDestroy() {
@@ -62,6 +67,7 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy {
   handleScroll(ev) {
     const radio = ev.target.scrollLeft / ev.target.scrollWidth;
     this.selectIndex = Math.round(radio * this.imageSlider.length);
+    // this.ref.markForCheck();
   }
 
 

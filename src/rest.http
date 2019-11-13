@@ -1,0 +1,18 @@
+@baseUrl = https://jsonplaceholder.typicode.com
+GET {{baseUrl}}/POSTs
+
+###
+POST {{baseUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "fgjsdlfg",
+    "body": "dfasdfd",
+    "userId": 1
+}
+
+###
+
+GET http://localhost:4200/assets/virtual/topMenus.json HTTP/1.1
+
+

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter, ElementRef, HostBinding,
-  Renderer2, AfterViewInit, AfterContentInit } from '@angular/core';
+  Renderer2, AfterViewInit, AfterContentInit, ChangeDetectionStrategy } from '@angular/core';
 
 export interface Channel {
   id: number;
@@ -11,7 +11,8 @@ export interface Channel {
 @Component({
   selector: 'app-horizontal-grid',
   templateUrl: './horizontal-grid.component.html',
-  styleUrls: ['./horizontal-grid.component.scss']
+  styleUrls: ['./horizontal-grid.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HorizontalGridComponent implements OnInit, AfterViewInit, AfterContentInit {
   @Input() cols = 8;

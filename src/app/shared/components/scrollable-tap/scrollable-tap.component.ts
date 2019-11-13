@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges, ChangeDetectionStrategy } from '@angular/core';
 
 export interface TopMenu {
   title: string;
@@ -8,7 +8,8 @@ export interface TopMenu {
 @Component({
   selector: 'app-scrollable-tap',
   templateUrl: './scrollable-tap.component.html',
-  styleUrls: ['./scrollable-tap.component.scss']
+  styleUrls: ['./scrollable-tap.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ScrollableTapComponent implements OnInit, OnChanges {
   /**
