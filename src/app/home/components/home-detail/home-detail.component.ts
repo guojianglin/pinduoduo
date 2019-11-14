@@ -13,6 +13,9 @@ import { filter, map } from 'rxjs/operators';
 })
 export class HomeDetailComponent implements OnInit {
 
+  startTime = new Date(2019, 11, 11);
+  futureTime = new Date(2019, 11, 12);
+
   // selecedTab: string;
   selecedTab$: Observable<string>;
 

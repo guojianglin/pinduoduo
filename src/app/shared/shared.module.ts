@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { SharedRoutingModule } from './shared-routing.module';
-import { ScrollableTapComponent, ImageSliderComponent, HorizontalGridComponent } from './components';
+import { ScrollableTapComponent, ImageSliderComponent, HorizontalGridComponent, CountDownComponent } from './components';
 import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } from './directives';
 import { AgoPipePipe } from './pipes';
 
@@ -16,7 +16,8 @@ import { AgoPipePipe } from './pipes';
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
-    AgoPipePipe
+    AgoPipePipe,
+    CountDownComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +33,8 @@ import { AgoPipePipe } from './pipes';
     GridItemDirective,
     GridItemImageDirective,
     GridItemTitleDirective,
-    AgoPipePipe
+    AgoPipePipe,
+    CountDownComponent
   ]
 })
 export class SharedModule { }

@@ -1,7 +1,7 @@
 <div *ngIf="(selecedTab$ | async) === 'hot' else other">
   <app-image-slider [imageSlider]="imageSlider$ | async"></app-image-slider>
   <app-horizontal-grid>
-      <div appGridItem *ngFor="let item of channels$ | async">
+      <div appGridItem *ngFor="let item of (channels$ | async)">
           <div [appGridItemImage]="'4rem'">
               <svg class="icon img" aria-hidden="true">
                   <use [attr.href]="'#'+item.icon"></use>
@@ -13,7 +13,8 @@
 </div>
 
 <ng-template #other>
-  other works!!!
+  <app-count-down [start]="startTime" [future]="futureTime"></app-count-down>
+  other works!!!!
 </ng-template>
 
 <a [routerLink]="['grand']" routerLinkActive='active'>link to grand</a>
