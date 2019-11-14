@@ -1,7 +1,7 @@
-<div *ngIf="selecedTab === 'hot' else other">
-  <app-image-slider [imageSlider]="imageSlider"></app-image-slider>
+<div *ngIf="(selecedTab$ | async) === 'hot' else other">
+  <app-image-slider [imageSlider]="imageSlider$ | async"></app-image-slider>
   <app-horizontal-grid>
-      <div appGridItem *ngFor="let item of channels">
+      <div appGridItem *ngFor="let item of channels$ | async">
           <div [appGridItemImage]="'4rem'">
               <svg class="icon img" aria-hidden="true">
                   <use [attr.href]="'#'+item.icon"></use>

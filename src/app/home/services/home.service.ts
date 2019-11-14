@@ -3,6 +3,18 @@ import { HomeModule } from '../home.module';
 import { TopMenu, Channel, ImageSlider } from 'src/app/shared/components';
 import { HttpClient } from '@angular/common/http';
 
+interface TopMenusRes {
+  data: TopMenu[];
+}
+
+interface ChannelRes {
+  data: Channel[];
+}
+
+interface ImageSliderRes {
+  data: ImageSlider[];
+}
+
 @Injectable()
 export class HomeService {
 
@@ -213,17 +225,17 @@ export class HomeService {
 
   getTabs() {
     // return this.topMenus;
-    return this.http.get<TopMenu[]>('assets/virtual-data/topMenus.json');
+    return this.http.get<TopMenusRes>('assets/virtual-data/topMenus.json');
   }
 
   getChannels() {
     // return this.channels;
-    return this.http.get<Channel[]>('assets/virtual-data/channels.json');
+    return this.http.get<ChannelRes>('assets/virtual-data/channels.json');
   }
 
   getImages() {
     // return this.imageSlider;
-    return this.http.get<ImageSlider[]>('assets/virtual-data/imageSlider.json');
+    return this.http.get<ImageSliderRes>('assets/virtual-data/imageSlider.json');
   }
 
 }

@@ -11,7 +11,7 @@ export interface TopMenu {
   styleUrls: ['./scrollable-tap.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ScrollableTapComponent implements OnInit, OnChanges {
+export class ScrollableTapComponent implements OnInit {
   /**
    * 构造函数总是第一个被调用
    */
@@ -23,14 +23,6 @@ export class ScrollableTapComponent implements OnInit, OnChanges {
   @Input() titleActiveColor = '#000';
   @Input() indicatorColor = 'brown';
   @Output() tapSelected = new EventEmitter();
-
-  /**
-   * 组件输入型属性改变时调用，第一个调用且以后只要有输入性属性改变就会调用
-   * @param changes 索引对象 key是属性名，value是SimpleChanges
-   */
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
-  }
 
   /**
    * 组件初始化完成，可以安全地使用方法和属性
