@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "imageUrl": "assets/products/product1.png",
+            "title": "宇宙飞船",
+            "tags": ["白日梦", "银河战舰", "星球大战", "光速", "无惧虫洞", "霍金强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar002.png"]
+        },
+        {
+            "id": 2,
+            "imageUrl": "assets/products/product2.png",
+            "title": "深海潜艇",
+            "tags": ["深海梦", "银河战舰", "环太平洋大战", "子弹头", "无惧深渊", "海王强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar003.png"]
+        },
+        {
+            "id": 3,
+            "imageUrl": "assets/products/product3.png",
+            "title": "记忆面包",
+            "tags": ["哆啦A梦", "压倒量子力学读书法", "学渣最爱", "学霸期待", "无惧考试", "大雄强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar004.png"]
+        },
+        {
+            "id": 4,
+            "imageUrl": "assets/products/product4.png",
+            "title": "火影护额",
+            "tags": ["高级上忍", "佐助纪念版", "不怕发际线高", "装逼必备", "无需考试", "鸣人强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar005.png"]
+        },
+        {
+            "id": 5,
+            "imageUrl": "assets/products/product5.png",
+            "title": "外附魂骨",
+            "tags": ["人面魔蛛", "封号斗罗必备", "小舞最爱", "傻逼必备", "勉强满足蜘蛛侠梦", "唐三强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar002.png", "assets/avatars/avatar003.png"]
+        },
+        {
+            "id": 6,
+            "imageUrl": "assets/products/product6.png",
+            "title": "西天奇经",
+            "tags": ["西行纪", "狼妖守护", "龙女", "硬汉西游", "大妖悟空真帅", "白狼强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar002.png", "assets/avatars/avatar004.png"]
+        },
+        {
+            "id": 7,
+            "imageUrl": "assets/products/product7.png",
+            "title": "金箍棒",
+            "tags": ["定海神针", "可大可小", "齐天大圣孙悟空", "西游必备", "一柱擎天", "龙王强烈推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar002.png", "assets/avatars/avatar005.png"]
+        },
+        {
+            "id": 8,
+            "imageUrl": "assets/products/product8.png",
+            "title": "仙剑李逍遥",
+            "tags": ["男神胡歌", "琅琊榜", "逆境重生", "潇洒自在", "一柱擎天", "赵灵儿林月如联袂推荐"],
+            "price": 99,
+            "priceDesc": "98.888",
+            "buyerAvatars": ["assets/avatars/avatar003.png", "assets/avatars/avatar004.png"]
+        }
+    ]
+}

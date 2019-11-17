@@ -3,16 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { HomeContainerComponent, HomeDetailComponent, HomeGrandComponent, HomeAuxComponent, HomeThirdComponent } from './components';
+import { HomeContainerComponent, HomeDetailComponent } from './components';
 import { HomeService } from './services';
 
 
 @NgModule({
-  declarations: [HomeContainerComponent, HomeDetailComponent, HomeGrandComponent, HomeAuxComponent, HomeThirdComponent],
+  declarations: [HomeContainerComponent, HomeDetailComponent],
   imports: [
     SharedModule,
     HomeRoutingModule
   ],
-  providers:[HomeService]
+  providers: [HomeService]
 })
 export class HomeModule { }

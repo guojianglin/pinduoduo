@@ -13,6 +13,9 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:4200/assets/virtual/topMenus.json HTTP/1.1
+GET http://localhost:4200/assets/virtual-data/topMenus.json HTTP/1.1
+
+###
+GET http://localhost:4200/assets/virtual-data/ads.json HTTP/1.1
 
 

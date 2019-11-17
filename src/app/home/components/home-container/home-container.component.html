@@ -1,8 +1,12 @@
 <app-scrollable-tap
 [menus]="topMenus$ | async"
 (tapSelected)="handleTapSelected($event)"
-backgroundColor="green"
+backgroundColor="pink"
 titleActiveColor="red"
 indicatorColor="green"
+[selectedTabLink]="selectedTabLink$ | async"
 ></app-scrollable-tap>
-<router-outlet></router-outlet>
+
+<div class="main">
+    <router-outlet></router-outlet>
+</div>

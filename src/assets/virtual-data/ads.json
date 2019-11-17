@@ -1,0 +1,16 @@
+{
+    "data": [
+        {
+            "imageUrl": "/assets/ads/ad1.png",
+            "link": "ad1"
+        },
+        {
+            "imageUrl": "/assets/ads/ad2.png",
+            "link": "ad2"
+        },
+        {
+            "imageUrl": "/assets/ads/ad3.png",
+            "link": "ad3"
+        }
+    ]
+}

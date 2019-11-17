@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { TopMenu } from '../../../shared/components';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { HomeService } from '../../services';
 import { Observable, pipe } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-home-container',
@@ -15,9 +15,11 @@ export class HomeContainerComponent implements OnInit {
 
   // topMenus;
   topMenus$: Observable<TopMenu[]>;
+  selectedTabLink$: Observable<string>;
   constructor(
     private router: Router,
-    private homeService: HomeService
+    private homeService: HomeService,
+    private route: ActivatedRoute
   ) {
     // this.homeService.getTabs().subscribe((res: any) => {
     //   this.topMenus = res.data;
@@ -31,7 +33,13 @@ export class HomeContainerComponent implements OnInit {
       map(param => param.data)
     );
   }
-  ngOnInit() {}
+  ngOnInit() {
+    this.selectedTabLink$ = this.route.firstChild.paramMap.pipe(
+      filter(params => params.has('variable')),
+      map(params => params.get('variable')),
+      // tap(res => console.log('----------', res))
+    );
+  }
   handleTapSelected(menu: TopMenu) {
     this.router.navigate(['/home', menu.link]);
   }

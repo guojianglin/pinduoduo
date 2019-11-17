@@ -3,7 +3,8 @@ import { Channel, ImageSlider } from 'src/app/shared/components';
 import { ActivatedRoute } from '@angular/router';
 import { HomeService } from '../../services';
 import { Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
+import { filter, map, switchMap } from 'rxjs/operators';
+import { Ad, Product } from 'src/app/shared';
 
 @Component({
   selector: 'app-home-detail',
@@ -23,6 +24,9 @@ export class HomeDetailComponent implements OnInit {
   imageSlider$: Observable<any>;
   // channels;
   channels$: Observable<any>;
+  ad$: Observable<Ad>;
+
+  products$: Observable<Product[]>;
   constructor(
     private route: ActivatedRoute,
     private homeService: HomeService,
@@ -62,6 +66,18 @@ export class HomeDetailComponent implements OnInit {
     // this.route.queryParamMap.subscribe(params => {
     //   console.log('查询参数', params);
     // });
+
+    this.ad$ = this.selecedTab$.pipe(
+      switchMap(tab => {
+        return this.homeService.getAdsByTab(tab).pipe(
+          map(res => res.data[0])
+        );
+      })
+    );
+
+    this.products$ = this.homeService.getProductsByTab().pipe(
+      map(products => products.data)
+    );
   }
 
 }

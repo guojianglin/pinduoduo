@@ -1,27 +1,27 @@
-<div *ngIf="(selecedTab$ | async) === 'hot' else other">
-  <app-image-slider [imageSlider]="imageSlider$ | async"></app-image-slider>
-  <app-horizontal-grid>
+<ng-container *ngIf="selecedTab$ | async as tab">
+  <ng-container *ngIf="tab === 'hot'">
+
+    <app-image-slider [imageSlider]="imageSlider$ | async"></app-image-slider>
+
+    <app-horizontal-grid>
       <div appGridItem *ngFor="let item of (channels$ | async)">
-          <div appGridItemImage="4rem">
-              <svg class="icon img" aria-hidden="true">
-                  <use [attr.href]="'#'+item.icon"></use>
-              </svg>
-          </div>
-          <span appGridItemTitle>{{ item.title }}</span>
+        <div appGridItemImage="2rem">
+          <svg class="icon img" aria-hidden="true">
+            <use [attr.href]="'#'+item.icon"></use>
+          </svg>
+        </div>
+        <span appGridItemTitle>{{ item.title }}</span>
       </div>
-  </app-horizontal-grid>
+    </app-horizontal-grid>
+
+  </ng-container>
+</ng-container>
+
+<div class="ad-container" *ngIf="ad$ | async as ad">
+  <img [src]="ad.imageUrl" class="ad-image">
 </div>
 
-<ng-template #other>
-  <app-count-down [start]="startTime" [future]="futureTime"></app-count-down>
-  other works!!!!
-</ng-template>
+<app-vertical-grid [itemWidth]="'20rem'">
+  <div *ngFor="let product of products$ | async">{{ product.title }}</div>
+</app-vertical-grid>
 
-<a [routerLink]="['grand']" routerLinkActive='active'>link to grand</a>
-<a [routerLink]="[{outlets: {second: ['aux']}}]" routerLinkActive='active'>link to second outlet aux component</a>
-<a [routerLink]="[{outlets: {second: ['third']}}]" routerLinkActive='active'>link to second outlet third component</a>
-<a [routerLink]="[{outlets: {third: ['aux']}}]" routerLinkActive='active'>link to third outlet aux component</a>
-<a [routerLink]="[{outlets: {third: ['third']}}]" routerLinkActive='active'>link to third outlet third component</a>
-<router-outlet></router-outlet>
-<router-outlet name="second"></router-outlet>
-<router-outlet name="third"></router-outlet>

@@ -6,6 +6,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { ScrollableTapComponent, ImageSliderComponent, HorizontalGridComponent, CountDownComponent, FooterComponent } from './components';
 import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective } from './directives';
 import { AgoPipePipe } from './pipes';
+import { VerticalGridComponent } from './components/vertical-grid/vertical-grid.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AgoPipePipe } from './pipes';
     GridItemTitleDirective,
     AgoPipePipe,
     CountDownComponent,
-    FooterComponent
+    FooterComponent,
+    VerticalGridComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { AgoPipePipe } from './pipes';
     GridItemTitleDirective,
     AgoPipePipe,
     CountDownComponent,
-    FooterComponent
+    FooterComponent,
+    VerticalGridComponent
   ]
 })
 export class SharedModule { }

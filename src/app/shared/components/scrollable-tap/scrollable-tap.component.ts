@@ -17,6 +17,7 @@ export class ScrollableTapComponent implements OnInit {
    */
   constructor() { }
   selectedIndex = -1;
+  @Input() selectedTabLink;
   @Input() menus: TopMenu[] = [];
   @Input() backgroundColor = 'red';
   @Input() titleColor = '#000';
@@ -31,8 +32,8 @@ export class ScrollableTapComponent implements OnInit {
   }
 
   handleSelected(index: number) {
-    this.selectedIndex = index;
-    this.tapSelected.emit(this.menus[this.selectedIndex]);
+    this.selectedTabLink = this.menus[index].link;
+    this.tapSelected.emit(this.menus[index]);
   }
 
 }
