@@ -2,7 +2,7 @@
   <app-image-slider [imageSlider]="imageSlider$ | async"></app-image-slider>
   <app-horizontal-grid>
       <div appGridItem *ngFor="let item of (channels$ | async)">
-          <div [appGridItemImage]="'4rem'">
+          <div appGridItemImage="4rem">
               <svg class="icon img" aria-hidden="true">
                   <use [attr.href]="'#'+item.icon"></use>
               </svg>

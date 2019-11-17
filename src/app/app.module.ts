@@ -8,6 +8,11 @@ import localZh from '@angular/common/locales/zh-Hans';
 import { registerLocaleData } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ParamInterceptor, NotificationInterceptor } from './home';
+import { RecommendModule } from './recommend';
+import { CategoryModule } from './category';
+import { ChatModule } from './chat';
+import { MyModule } from './my';
+import { ProductModule } from './product';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { ParamInterceptor, NotificationInterceptor } from './home';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    RecommendModule,
+    CategoryModule,
+    ChatModule,
+    MyModule,
+    ProductModule
   ],
   providers: [
     {

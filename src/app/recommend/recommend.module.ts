@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { RecommendRoutingModule } from './recommend-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { RecommentContainerComponent } from './components';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    RecommentContainerComponent
+  ],
   imports: [
     SharedModule,
-    RecommendRoutingModule
+    CommonModule,
+    RecommendRoutingModule,
   ]
 })
 export class RecommendModule { }
