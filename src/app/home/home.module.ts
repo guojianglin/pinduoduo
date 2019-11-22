@@ -13,6 +13,6 @@ import { HomeService } from './services';
     SharedModule,
     HomeRoutingModule
   ],
-  providers: [HomeService]
+  // providers: [HomeService]
 })
 export class HomeModule { }

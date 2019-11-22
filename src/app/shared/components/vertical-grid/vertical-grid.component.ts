@@ -16,7 +16,7 @@ export class VerticalGridComponent implements OnInit {
   }
 
   get templateRows() {
-    return `minmax(auto-fill, ${this.itemHeight})`;
+    return `minmax(auto-fit, ${this.itemHeight})`;
   }
 
   get templateColumns() {

@@ -25,7 +25,9 @@ interface ProductRes {
   data: Product[];
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HomeService {
 
 
