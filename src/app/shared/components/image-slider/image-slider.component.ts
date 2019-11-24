@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, ElementRef, AfterViewInit, Renderer2, OnDestroy,
+  ChangeDetectionStrategy, ChangeDetectorRef, OnChanges } from '@angular/core';
 
 export interface ImageSlider {
   imgUrl: string;
@@ -10,7 +11,7 @@ export interface ImageSlider {
   selector: 'app-image-slider',
   templateUrl: './image-slider.component.html',
   styleUrls: ['./image-slider.component.scss'],
-  // changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy, OnChanges {
 
@@ -27,6 +28,9 @@ export class ImageSliderComponent implements OnInit, AfterViewInit, OnDestroy, O
 
   ngOnInit() {
     console.log('ngOnInit', this.imgSlider);
+    if (this.timeoutBySeconds <= 0) {
+      return;
+    }
     this.autoSlide();
   }
 
