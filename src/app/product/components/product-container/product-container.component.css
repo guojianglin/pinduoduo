@@ -1,0 +1,15 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+app-back-button {
+    position: fixed;
+    left: 1rem;
+    top: 1.2rem;
+    z-index: 2000;
+}

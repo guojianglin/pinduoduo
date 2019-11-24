@@ -4,7 +4,13 @@ import { ProductContainerComponent } from './components';
 
 
 const routes: Routes = [
-  { path: 'product', component: ProductContainerComponent}
+  { path: 'products',
+    children: [
+      {
+        path: ':productId', component: ProductContainerComponent
+      }
+    ]
+  }
 ];
 
 @NgModule({

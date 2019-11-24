@@ -9,6 +9,7 @@ import { GridItemDirective, GridItemImageDirective, GridItemTitleDirective, TagD
 import { AgoPipePipe } from './pipes';
 import { VerticalGridComponent } from './components/vertical-grid/vertical-grid.component';
 import { ProductTileComponent } from './components/product-tile/product-tile.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { ProductTileComponent } from './components/product-tile/product-tile.com
     FooterComponent,
     VerticalGridComponent,
     ProductCardComponent,
-    ProductTileComponent
+    ProductTileComponent,
+    BackButtonComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,8 @@ import { ProductTileComponent } from './components/product-tile/product-tile.com
     FooterComponent,
     VerticalGridComponent,
     ProductCardComponent,
-    ProductTileComponent
+    ProductTileComponent,
+    BackButtonComponent
   ]
 })
 export class SharedModule { }
