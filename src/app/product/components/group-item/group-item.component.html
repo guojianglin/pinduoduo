@@ -1,0 +1,11 @@
+<div class="container">
+    <img appAvatar appAvatarSize="2rem" [src]="order.avatar" >
+    <div class="username">{{ order.startBy }}</div>
+    <div class="count-down">
+        <div>
+            还差<span class="remaining-number">{{ order.remainingNumber }}</span>人拼成
+        </div>
+        <app-count-down [start]="startDate" [future]="futureDate"></app-count-down>
+    </div>
+    <button class="group-button" type="button">去拼单</button>
+</div>

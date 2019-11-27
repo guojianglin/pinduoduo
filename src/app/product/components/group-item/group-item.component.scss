@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    padding: .5rem 1rem;
+    align-items: center;
+}
+
+.username {
+    flex: 1;
+    margin: 0 .2rem;
+}
+
+.count-down {
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 .2rem;
+}
+
+.group-button {
+    background-color: #e02f29;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: .2rem .4rem;
+    border-radius: 5px;
+}
+
+.remaining-number {
+    color: #e02f29;
+}

@@ -30,7 +30,7 @@ export class CountDownComponent implements OnInit {
         minute: Math.floor(sec / 60) % 60,
         second: Math.floor(sec % 60)
       })),
-      tap(console.log),
+      // tap(console.log),
       map(({hour, minute, second}) => {
           return `${hour < 10 ? '0' : ''}${hour}:${minute < 10 ? '0' : ''}${minute}:${second < 10 ? '0' : ''}${second}`
       })

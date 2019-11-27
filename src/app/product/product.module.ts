@@ -3,14 +3,22 @@ import { CommonModule } from '@angular/common';
 
 import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { ProductContainerComponent } from './components';
+import { ProductContainerComponent, GroupItemComponent, ProductAmountComponent,
+  GroupShortListComponent, ProductVariantDialogComponent } from './components';
+
 
 
 @NgModule({
-  declarations: [ProductContainerComponent],
+  declarations: [
+    ProductContainerComponent,
+    GroupItemComponent,
+    GroupShortListComponent,
+    ProductVariantDialogComponent,
+    ProductAmountComponent],
   imports: [
     SharedModule,
     ProductRoutingModule
-  ]
+  ],
+  entryComponents: [ProductVariantDialogComponent]
 })
 export class ProductModule { }

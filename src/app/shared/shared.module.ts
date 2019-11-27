@@ -10,6 +10,7 @@ import { AgoPipePipe } from './pipes';
 import { VerticalGridComponent } from './components/vertical-grid/vertical-grid.component';
 import { ProductTileComponent } from './components/product-tile/product-tile.component';
 import { BackButtonComponent } from './components/back-button/back-button.component';
+import { DialogModule } from '../dialog';
 
 
 @NgModule({
@@ -33,11 +34,12 @@ import { BackButtonComponent } from './components/back-button/back-button.compon
   imports: [
     CommonModule,
     FormsModule,
-    SharedRoutingModule
+    SharedRoutingModule,
   ],
   exports: [
     CommonModule,
     SharedRoutingModule,
+    DialogModule,
     ScrollableTapComponent,
     ImageSliderComponent,
     HorizontalGridComponent,
