@@ -42,7 +42,7 @@ export class ProductContainerComponent implements OnInit {
     const formSubmitted = new EventEmitter();
     formSubmitted.subscribe(ev => {
       this.dialogService.saveData(ev);
-      this.router.navigate(['/order/confirm']);
+      this.router.navigate(['/orders/confirm']);
     });
 
     const selected = new EventEmitter();

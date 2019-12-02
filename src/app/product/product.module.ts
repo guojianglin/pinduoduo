@@ -5,6 +5,8 @@ import { ProductRoutingModule } from './product-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ProductContainerComponent, GroupItemComponent, ProductAmountComponent,
   GroupShortListComponent, ProductVariantDialogComponent } from './components';
+import { ComfirmOrderComponent } from './components/comfirm-order/comfirm-order.component';
+import { PaymentComponent } from './components/payment/payment.component';
 
 
 
@@ -14,7 +16,9 @@ import { ProductContainerComponent, GroupItemComponent, ProductAmountComponent,
     GroupItemComponent,
     GroupShortListComponent,
     ProductVariantDialogComponent,
-    ProductAmountComponent],
+    ProductAmountComponent,
+    ComfirmOrderComponent,
+    PaymentComponent],
   imports: [
     SharedModule,
     ProductRoutingModule
