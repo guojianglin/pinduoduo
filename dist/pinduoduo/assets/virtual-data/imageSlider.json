@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "imgUrl": "/assets/images/1.png",
+      "link": "",
+      "caption": ""
+    },
+    {
+      "imgUrl": "/assets/images/2.png",
+      "link": "",
+      "caption": ""
+    },
+    {
+      "imgUrl": "/assets/images/3.png",
+      "link": "",
+      "caption": ""
+    },
+    {
+      "imgUrl": "/assets/images/4.png",
+      "link": "",
+      "caption": ""
+    },
+    {
+      "imgUrl": "/assets/images/5.png",
+      "link": "",
+      "caption": ""
+    },
+    {
+      "imgUrl": "/assets/images/6.png",
+      "link": "",
+      "caption": ""
+    }
+  ]
+}

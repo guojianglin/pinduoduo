@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "product": {
+            "id": 1,
+            "imageUrl": "assets/products/product1.png",
+            "tags": ["宇宙飞船", "没有包邮"],
+            "title": "白日梦银河战舰星球大战光速无惧虫洞霍金强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar002.png"]
+        },
+        "name": "款式1",
+        "price": 99,
+        "listPrice": 99,
+        "productVariantImages": [
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage1.png",
+                "link": "",
+                "caption": ""
+            },
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage2.png",
+                "link": "",
+                "caption": ""
+            },
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage3.png",
+                "link": "",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "product": {
+            "id": 1,
+            "imageUrl": "assets/products/product1.png",
+            "tags": ["宇宙飞船", "没有包邮"],
+            "title": "白日梦银河战舰星球大战光速无惧虫洞霍金强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar002.png"]
+        },
+        "name": "款式2",
+        "price": 99,
+        "listPrice": 99,
+        "productVariantImages": [
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage2.png",
+                "link": "",
+                "caption": ""
+            },
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage1.png",
+                "link": "",
+                "caption": ""
+            },
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage3.png",
+                "link": "",
+                "caption": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "product": {
+            "id": 1,
+            "imageUrl": "assets/products/product1.png",
+            "tags": ["宇宙飞船", "没有包邮"],
+            "title": "白日梦银河战舰星球大战光速无惧虫洞霍金强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar002.png"]
+        },
+        "name": "款式3",
+        "price": 99,
+        "listPrice": 99,
+        "productVariantImages": [
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage3.png",
+                "link": "",
+                "caption": ""
+            },
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage2.png",
+                "link": "",
+                "caption": ""
+            },
+            {
+                "imgUrl": "assets/introducional-images/introducionalImage1.png",
+                "link": "",
+                "caption": ""
+            }
+        ]
+    }
+]

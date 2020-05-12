@@ -1,0 +1,76 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "imageUrl": "assets/products/product1.png",
+            "tags": ["宇宙飞船", "没有包邮"],
+            "title": "白日梦银河战舰星球大战光速无惧虫洞霍金强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar002.png"]
+        },
+        {
+            "id": 2,
+            "imageUrl": "assets/products/product2.png",
+            "tags": ["深海潜艇", "没有包邮"],
+            "title": "深海梦银河战舰环太平洋大战子弹头无惧深渊海王强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar003.png"]
+        },
+        {
+            "id": 3,
+            "imageUrl": "assets/products/product3.png",
+            "tags": ["记忆面包", "没有包邮"],
+            "title": "哆啦A梦压倒量子力学读书法学渣最爱学霸期待无惧考试大雄强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar004.png"]
+        },
+        {
+            "id": 4,
+            "imageUrl": "assets/products/product4.png",
+            "tags": ["火影护额", "没有包邮"],
+            "title": "高级上忍佐助纪念版不怕发际线高装逼必备无需考试鸣人强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar001.png", "assets/avatars/avatar005.png"]
+        },
+        {
+            "id": 5,
+            "imageUrl": "assets/products/product5.png",
+            "tags": ["外附魂骨", "没有包邮"],
+            "title": "人面魔蛛封号斗罗必备小舞最爱傻逼必备勉强满足蜘蛛侠梦唐三强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar002.png", "assets/avatars/avatar003.png"]
+        },
+        {
+            "id": 6,
+            "imageUrl": "assets/products/product6.png",
+            "tags": ["西天奇经", "没有包邮"],
+            "title": "西行纪狼妖守护龙女硬汉西游大妖悟空真帅白狼强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar002.png", "assets/avatars/avatar004.png"]
+        },
+        {
+            "id": 7,
+            "imageUrl": "assets/products/product7.png",
+            "tags": ["金箍棒", "没有包邮"],
+            "title": "定海神针可大可小齐天大圣孙悟空西游必备一柱擎天龙王强烈推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar002.png", "assets/avatars/avatar005.png"]
+        },
+        {
+            "id": 8,
+            "imageUrl": "assets/products/product8.png",
+            "tags": ["仙剑李逍遥", "没有包邮"],
+            "title": "男神胡歌琅琊榜逆境重生潇洒自在一柱擎天赵灵儿林月如联袂推荐",
+            "price": 99,
+            "priceDesc": "已卖99万件",
+            "buyerAvatars": ["assets/avatars/avatar003.png", "assets/avatars/avatar004.png"]
+        }
+    ]
+}
